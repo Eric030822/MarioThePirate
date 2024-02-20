@@ -1,14 +1,14 @@
-from os.path imoprt join
+from os.path import join
 from settings import *
 from level import level
-from pytmx.until_pygame import load_pygame
+from pytmx.util_pygame import load_pygame
 
 
 class Game:
     def __init__(self):
         pygame.init()
-        self.display_surface = pygame.dissplay.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
-        pygame.dissplay.set_caption("MarioThePirate")
+        self.display_surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
+        pygame.display.set_caption("MarioThePirate")
         self.clock = pygame.time.Clock()
 
         self.tmx_maps = {0: load_pygame(join("PirateGame/MarioThePirate/importantstuff", "data", "levels", "omni.tmx"))}
